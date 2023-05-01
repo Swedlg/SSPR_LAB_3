@@ -27,7 +27,6 @@ pipeline {
         stage("Push Image To Docker Hub") {
             steps {
                 withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                    bat 'echo ${dockerhubpwd}'
                     bat 'docker login --username swedlg --password ${dockerhubpwd}'
                     bat 'docker push swedlg/app'
                 }
