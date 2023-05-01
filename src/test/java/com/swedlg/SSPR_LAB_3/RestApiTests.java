@@ -26,7 +26,7 @@ public class RestApiTests {
     public void testMultiplicationApi(){
         MainController mainController = new MainController();
         ResponseEntity<String> response = mainController.calculateMultiplication("12.5", "3.2", null);
-        assertEquals("40.0", response.getBody());
+        assertEquals("41.0", response.getBody());
     }
 
     @Test

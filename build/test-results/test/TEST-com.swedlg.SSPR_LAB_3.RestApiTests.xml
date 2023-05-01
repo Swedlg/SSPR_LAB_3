@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.swedlg.SSPR_LAB_3.RestApiTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-05-01T11:54:49" hostname="LAPTOP-GV4FSJ96" time="0.049">
+  <properties/>
+  <testcase name="testDivisionApi()" classname="com.swedlg.SSPR_LAB_3.RestApiTests" time="0.043"/>
+  <testcase name="testMultiplicationApi()" classname="com.swedlg.SSPR_LAB_3.RestApiTests" time="0.001"/>
+  <testcase name="testSumApi()" classname="com.swedlg.SSPR_LAB_3.RestApiTests" time="0.001"/>
+  <testcase name="testSubtractionApi()" classname="com.swedlg.SSPR_LAB_3.RestApiTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
