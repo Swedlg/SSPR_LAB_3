@@ -1,6 +1,7 @@
+properties([disableConcurrentBuilds()])
+
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
@@ -12,11 +13,15 @@ pipeline {
             steps {
                 bat './gradlew test'
             }
-
             post {
                 always {
                     junit '**/build/test-results/test/TEST-*.xml'
                 }
+            }
+        }
+        stage("Create Docker Image") {
+            steps {
+                bat 'docker image build -t app .'
             }
         }
     }
