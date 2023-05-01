@@ -21,8 +21,17 @@ pipeline {
         }
         stage("Create Docker Image") {
             steps {
-                bat 'docker image build -t app .'
+                bat 'docker image build -t swedlg/app .'
             }
         }
+        stage("Push Image To Docker Hub") {
+            steps {
+                withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+                    bat 'docker login -u swedlg -p ${dockerhubpwd}'
+                    bat 'docker push swedlg/app'
+                }
+            }
+        }
+
     }
 }
